@@ -21,21 +21,72 @@ applyInitialTheme();
 
 const posts = [
   {
-    slug: 'good-morning-routine',
-    title: '성공적인 하루를 위한 아침 루틴의 중요성',
-    category: "King's IT", // Changed category
-    date: '2026년 2월 1일',
+    slug: 'avaco-investment-diary',
+    title: '아바코(AVACO) 주가, 아직도 배고픈가? 10년차 IT 전문가의 기술적 해자 & 수주 모멘텀 완벽 분석',
+    category: "Money-Log",
+    date: '2026년 2월 4일',
     content: `
-      <h2>성공적인 하루를 위한 아침 루틴의 중요성</h2>
-      <p>잘 짜여진 아침 루틴은 하루 전체의 분위기를 좌우할 수 있습니다. 단순히 일찍 일어나는 것이 아니라, 생산성을 높이고 스트레스를 줄이며 전반적인 웰빙을 향상시키는 습관을 만드는 것입니다. 이 글에서는 효과적인 아침 루틴의 핵심 요소와 자신에게 맞는 루틴을 만드는 방법을 알아봅니다.</p>
-      <h3>아침 루틴의 핵심 요소</h3>
+      <h2>[서론] 킹경덕이 '아바코'를 주목하는 이유</h2>
+      <p>제군들, 킹경덕이다. 나의 레이더에 아주 흥미로운 종목이 포착되었다. 바로 <strong>아바코(AVACO)</strong>.</p>
+      <p>IT 기획자로서 기업의 본질을 꿰뚫어 볼 때, 나의 첫 번째 질문은 항상 이것이다. <strong>"대체 불가능한 기술, 즉 '해자(Moat)'를 가졌는가?"</strong></p>
+      <p>아바코는 이 질문에 '그렇다'고 명확히 답하는 기업이다. 오늘은 내가 왜 이 기업에 주목하고 있는지, 그동안의 분석과 데이터를 총정리하여 '투자 일기'의 첫 페이지를 열고자 한다. 이 기록이 아바코 주주들, 그리고 기회의 냄새를 맡는 투자자들에게 유용한 통찰이 되길 바란다.</p>
+      
+      <h2>[본론 1] 아바코의 심장: 대체 불가능한 두 개의 성장 엔진</h2>
+      <p>기업의 가치는 결국 어떤 엔진으로 성장하는가에 달려있다. 내가 분석한 아바코의 성장 엔진은 견고하고 강력하다.</p>
       <ul>
-        <li><strong>수분 섭취:</strong> 잠자는 동안 빠져나간 수분을 보충하기 위해 물 한 잔으로 하루를 시작하세요.</li>
-        <li><strong>마음 챙김:</strong> 명상, 일기 쓰기, 또는 조용한 성찰의 시간이든, 마음 챙김은 명확하고 집중된 마음으로 하루를 시작하는 데 도움이 될 수 있습니다.</li>
-        <li><strong>운동:</strong> 짧은 운동이라도 에너지 수치를 높이고 기분을 개선할 수 있습니다.</li>
-        <li><strong>건강한 아침 식사:</strong> 영양가 있는 아침 식사로 몸에 활력을 불어넣어 하루를 시작하는 데 필요한 에너지를 얻으세요.</li>
+        <li><strong>독보적 기술력: 진공 박막 증착(Sputter)의 지배자</strong><br>
+          디스플레이와 반도체 공정의 핵심인 스퍼터 장비를 국산화한 것은 시작에 불과하다. LG디스플레이를 넘어, 까다롭기로 소문난 글로벌 탑티어 <strong>BOE의 8.6세대 라인까지 뚫었다</strong>는 것은 기술력에 대한 확실한 보증수표다.</li>
+        <li><strong>성공적인 포트폴리오 확장: '이차전지'라는 새로운 엔진 장착</strong><br>
+          과거 디스플레이에 편중되었던 리스크를 이차전지 '물류 자동화'와 '롤투롤(Roll-to-Roll)' 장비로 완벽하게 해소했다. 이는 단순한 사업 다각화를 넘어, <strong>미래 성장 산업의 중심에 올라탔다</strong>는 의미다.</li>
       </ul>
-      <p>이러한 습관을 아침 루틴에 포함시킴으로써 긍정적이고 생산적인 하루를 시작할 수 있습니다.</p>
+
+      <h2>[본론 2] 주가를 이끄는 강력한 모멘텀: 중국발 '수주 사이클'</h2>
+      <p>좋은 기업이 '위대한 기업'으로 도약하기 위해서는 강력한 모멘텀이 필요하다. 현재 아바코의 모멘텀은 단연 중국에서 불어오는 수주 훈풍이다.</p>
+      <ol>
+        <li><strong>1차 납품 완료, 신뢰를 증명하다</strong>: 2025년 초, BOE향 증착 장비 공급 계약을 성공적으로 마무리했다. 이는 단순한 납품이 아닌, <strong>'8.6세대 고사양 OLED 라인에서도 아바코의 장비는 완벽하다'</strong>는 것을 시장에 공표한 사건이다.</li>
+        <li><strong>2차 비딩 확정, 실적의 가시성 확보</strong>: 차이나비딩을 통해 확인된 2차 비딩 확정 소식은 '기대'를 '확신'으로 바꾸는 열쇠다. 1차의 성공이 <strong>2, 3차 수주로 이어지는 '선순환 구조'</strong>에 진입했음을 의미한다.</li>
+      </ol>
+
+      <h2>[본론 3] 데이터로 보는 아바코: The King's Checklist</h2>
+      <p>감(感)이 아닌 데이터로 말하는 것이 나의 원칙이다. 내가 직접 확인하고 주목한 핵심 지표는 다음과 같다.</p>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>주요 내용 및 킹경덕의 분석</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>수주 잔고</strong></td>
+            <td><strong>역대급 수주 잔고.</strong> 이는 2026년 실적 턴어라운드가 단순한 희망이 아닌, 예정된 미래라는 것을 보여준다.</td>
+          </tr>
+          <tr>
+            <td><strong>기술적 해자</strong></td>
+            <td>고진공 상태에서의 정밀 제어 기술. <strong>경쟁사가 쉽게 따라올 수 없는 높은 진입장벽</strong>을 구축했다.</td>
+          </tr>
+          <tr>
+            <td><strong>고객사 다변화</strong></td>
+            <td>LGD 의존도를 낮추고, <strong>북미 이차전지 및 중국 OLED 업체로 확장.</strong> 안정적인 매출 구조의 완성.</td>
+          </tr>
+          <tr>
+            <td><strong>재무 및 생산</strong></td>
+            <td>대규모 수주를 감당할 수 있는 <strong>안정적인 재무 구조와 생산 능력(CAPA) 확보.</strong> 기회가 왔을 때 잡을 준비가 되어있다.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>[결론] 향후 관전 포인트 및 킹경덕의 한 마디</h2>
+      <p>투자는 기업의 성장을 함께하는 여정이다. 나는 앞으로 아래 포인트들을 예리하게 추적하며 투자 일기를 계속 써 내려갈 것이다.</p>
+      <ul>
+          <li><strong>[관전 포인트 1]</strong> 2차 비딩 최종 계약 공시 규모 (나의 예상을 뛰어넘는가?)</li>
+          <li><strong>[관전 포인트 2]</strong> 북미 시장에서의 이차전지 장비 추가 수주 여부</li>
+          <li><strong>[관전 포인트 3]</strong> 차세대 먹거리, 반도체 장비(MLCC 등) 매출 비중 확대 속도</li>
+      </ul>
+      <p>나의 분석이 왕의 예지력이 될지, 그저 그런 기록이 될지, 앞으로의 투자 일기를 통해 증명해 보이겠다.</p>
+      <p><strong>제군들의 생각은 어떤가? 아바코의 미래에 대한 날카로운 통찰을 댓글로 공유해보라.</strong></p>
+      <hr>
+      <p><small>⚠️ <strong>Disclaimer</strong><br>본 포스팅은 개인적인 투자 공부를 기록한 것이며, 절대 특정 종목에 대한 매수/매도 권유가 아닙니다. 투자의 최종 결정과 책임은 본인에게 있음을 다시 한번 알려드립니다.</small></p>
     `
   },
   {
@@ -83,11 +134,11 @@ const posts = [
         <p>안녕하세요, 킹경덕의 Tech & Life log에 오신 것을 환영합니다! 저는 IT 기획자로서 실무에서 얻은 보안 노하우, 직접 사용해 본 테크 제품에 대한 솔직한 리뷰, 그리고 복잡한 재테크를 쉽고 슬기롭게 풀어내는 이야기를 공유하고 있습니다. 변화하는 IT 트렌드 속에서 여러분의 업무와 삶에 실질적인 도움을 드리고자 합니다.</p>
         <p>이곳에서 여러분은 다음과 같은 다양한 주제를 만나보실 수 있습니다:</p>
         <ul>
-            <li><strong>[King's IT]:</strong> 현직 IT 기획자의 시선으로 바라보는 운영, 보안, 개인 정보(PI) 보호 노하우.</li>
-            <li><strong>[Work-Log]:</strong> 업무 자동화 팁, AI 활용법 등 스마트한 업무 환경 구축을 위한 실용적인 정보.</li>
-            <li><strong>[Smart-Life]:</strong> 테슬라, 최신 가전제품 등 삶을 더 윤택하게 만들어 줄 테크 리뷰와 활용기.</li>
-            <li><strong>[Money-Log]:</strong> 복잡한 재테크와 부동산 투자, 자산 관리에 대한 쉽고 슬기로운 접근법.</li>
-            <li><strong>[Quick-Tips]:</strong> 일상 속에서 발견한 유용하고 소소한 꿀팁들.</li>
+            <li><strong>[King's IT & Work]:</strong> 전문성 있는 실무 가이드 (신뢰감 있는 어조)</li>
+            <li><strong>[Tech & Gear]:</strong> 깐깐한 장비 리뷰 (분석적인 어조)</li>
+            <li><strong>[Active Life]:</strong> 데이터 기반 운동 기록 (활기찬 어조)</li>
+            <li><strong>[Money & Insight]:</strong> 고수익 키워드 중심 재테크 (통찰력 있는 어조)</li>
+            <li><strong>[Daily Log]:</strong> 소소하지만 유용한 일상 팁 (친근한 어조)</li>
         </ul>
         <p>지식과 경험을 공유하며 함께 성장하는 공간이 되기를 바랍니다. 방문해 주셔서 감사합니다!</p>
     `
@@ -163,10 +214,14 @@ const posts = [
 const app = document.getElementById('app');
 
 function getCategories() {
-    const categories = posts
-      .filter(post => !['블로그 소개', '블로그 안내'].includes(post.category)) // Exclude special pages
-      .map(post => post.category);
-    return [...new Set(categories)];
+    const categories = [
+        "King’s IT & Work",
+        "Tech & Gear",
+        "Active Life",
+        "Money & Insight",
+        "Daily Log"
+    ];
+    return categories;
 }
 
 function renderPostList(filterCategory = null) {

@@ -73,9 +73,10 @@ body.dark-mode .subtitle {
 }
 
 nav a {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     text-decoration: none;
     color: var(--text-color-light);
+    font-size: 0.9rem;
 }
 
 body.dark-mode nav a {
@@ -246,4 +247,29 @@ body.dark-mode footer {
 
 body.dark-mode .social-links a {
     color: var(--primary-color-dark);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid var(--border-color-light);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: #f8f9fa;
+}
+
+body.dark-mode .custom-table th {
+    background-color: #343a40;
+}
+
+body.dark-mode .custom-table th, body.dark-mode .custom-table td {
+    border-color: var(--border-color-dark);
 }
