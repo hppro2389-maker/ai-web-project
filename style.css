@@ -123,12 +123,12 @@ nav {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out, background-color 0.3s, border-color 0.3s;
 }
 
 .post:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .post h2 {

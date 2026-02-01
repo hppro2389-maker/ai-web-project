@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const postElement = document.createElement('article');
             postElement.classList.add('post');
             postElement.innerHTML = `
-                <h2><a href="#" data-post-id="${post.id}">${post.title}</a></h2>
+                <h2><a href="/post/${post.id}" data-post-id="${post.id}">${post.title}</a></h2>
                 <div class="post-meta">게시일: ${post.date}</div>
                 <div class="post-content">
                     <p>${post.summary}</p>
@@ -149,44 +149,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function renderPost(postId) {
         const post = posts.find(p => p.id === postId);
-        if (!post) return;
+        if (!post) {
+            navigateTo('/'); // Redirect to home if post not found
+            return;
+        }
 
-        updateHeaderTitle(post.title); // Update header with post title
+        updateHeaderTitle(post.title);
 
-        // Base structure for the post view
         postViewContainer.innerHTML = `
-            <button id="back-to-list">← 목록으로 돌아가기</button>
+            <button id="back-to-list" data-page="home">← 목록으로 돌아가기</button>
             <div id="post-content-area"></div>
         `;
         const contentArea = postViewContainer.querySelector('#post-content-area');
 
         if (post.url) {
-            // If post content is in a separate file, fetch it
             fetch(post.url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
+                .then(response => response.ok ? response.text() : Promise.reject('File not found'))
                 .then(html => {
                     contentArea.innerHTML = html;
+                    // Prism.highlightAll is not needed if using autoloader
                 })
                 .catch(error => {
                     console.error('Error fetching post:', error);
                     contentArea.innerHTML = '<p>게시물을 불러오는 데 실패했습니다.</p>';
                 });
         } else if (post.content) {
-            // For older posts with content directly in the JS object
             contentArea.innerHTML = `
                 <article class="post">
                     <h2>${post.title}</h2>
                     <div class="post-meta">게시일: ${post.date}</div>
-                    <div class="post-content">
-                        ${post.content}
-                    </div>
+                    <div class="post-content">${post.content}</div>
                 </article>
             `;
+            // Prism.highlightAll(); might be needed here for inline content
         }
         showPage('post-view');
     }
@@ -195,54 +190,64 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebarPostList.innerHTML = '';
         posts.slice(0, 3).forEach(post => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="#" data-post-id="${post.id}">${post.title}</a>`;
+            li.innerHTML = `<a href="/post/${post.id}" data-post-id="${post.id}">${post.title}</a>`;
             sidebarPostList.appendChild(li);
         });
     }
 
-    // Event Delegation
-    document.body.addEventListener('click', function(e) {
-        const target = e.target;
-        const pageLink = target.closest('[data-page]');
-        const postLink = target.closest('[data-post-id]');
+    // --- Router Logic ---
+    const navigateTo = (url) => {
+        history.pushState({ path: url }, '', url);
+        router();
+    };
 
-        if (pageLink) {
-            e.preventDefault();
-            const pageId = pageLink.dataset.page;
-            if (pageId === 'home') {
-                renderPostList();
-            } else {
-                showPage(pageId);
-            }
-        } else if (postLink) {
-            e.preventDefault();
-            const postId = parseInt(postLink.dataset.postId, 10);
-            renderPost(postId);
-        } else if (target.id === 'back-to-list') {
-            e.preventDefault();
+    const router = () => {
+        const path = window.location.pathname;
+
+        if (path === '/' || path === '/index.html' || path.startsWith('/home')) {
             renderPostList();
+        } else if (path.startsWith('/post/')) {
+            const postId = parseInt(path.split('/')[2], 10);
+            renderPost(postId);
+        } else if (path.startsWith('/about')) {
+            showPage('about');
+        } else if (path.startsWith('/privacy')) {
+            showPage('privacy');
+        } else if (path.startsWith('/contact')) {
+            showPage('contact');
+        } else {
+            renderPostList(); // 404 fallback
+        }
+    };
+
+    window.addEventListener('popstate', router);
+
+    document.body.addEventListener('click', (e) => {
+        const anchor = e.target.closest('a');
+        if (anchor && anchor.href.startsWith(window.location.origin) && !e.metaKey && !e.ctrlKey) {
+             // Check for internal links that aren't special clicks
+            const targetUrl = new URL(anchor.href);
+            if (targetUrl.pathname !== window.location.pathname) {
+                e.preventDefault();
+                navigateTo(targetUrl.pathname);
+            }
+        }
+        // Handle buttons that act like links
+        const backButton = e.target.closest('#back-to-list');
+        if (backButton) {
+            e.preventDefault();
+            navigateTo('/');
         }
     });
 
-    // Initial Render
-    renderPostList();
+    // Initial Load
+    router();
     updateSidebar();
-
+    
     // --- Theme Toggle Logic ---
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('click', () => {
-        let currentTheme = document.documentElement.getAttribute('data-theme');
-        let newTheme = 'dark';
-        if (currentTheme === 'dark') {
-            newTheme = 'light';
-        }
-
-        if (newTheme === 'light') {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        }
+        const isDark = document.documentElement.toggleAttribute('data-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 });
