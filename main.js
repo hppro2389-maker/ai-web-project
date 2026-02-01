@@ -75,13 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const postViewContainer = document.getElementById('post-view');
     const aboutPage = document.getElementById('about-page');
     const privacyPage = document.getElementById('privacy-page');
+    const contactPage = document.getElementById('contact-page');
     const sidebarPostList = document.querySelector('#sidebar ul');
 
     const pages = {
         'post-list': postListContainer,
         'post-view': postViewContainer,
         'about': aboutPage,
-        'privacy': privacyPage
+        'privacy': privacyPage,
+        'contact': contactPage
     };
 
     function showPage(pageId) {
