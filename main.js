@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const ORIGINAL_BLOG_TITLE = '킹경덕의 Tech & Life log';
+    const headerTitleElement = document.getElementById('header-title');
+
     const posts = [
         {
             id: 6,
@@ -98,10 +101,23 @@ document.addEventListener('DOMContentLoaded', function() {
         'contact': contactPage
     };
 
+    function updateHeaderTitle(title = ORIGINAL_BLOG_TITLE) {
+        let displayTitle = title;
+        if (title.length > 15) {
+            displayTitle = title.substring(0, 15) + '...';
+        }
+        headerTitleElement.textContent = displayTitle;
+    }
+
     function showPage(pageId) {
         Object.values(pages).forEach(page => {
             if (page) page.style.display = 'none';
         });
+
+        if (pageId !== 'post-view') {
+            updateHeaderTitle(); // Reset header for all pages except post-view
+        }
+
         if (pages[pageId]) {
             pages[pageId].style.display = 'block';
         }
@@ -134,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderPost(postId) {
         const post = posts.find(p => p.id === postId);
         if (!post) return;
+
+        updateHeaderTitle(post.title); // Update header with post title
 
         // Base structure for the post view
         postViewContainer.innerHTML = `
