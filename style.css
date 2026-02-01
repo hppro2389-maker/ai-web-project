@@ -28,21 +28,37 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-header, footer {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #dee2e6;
 }
 
-body.dark-mode header,
-body.dark-mode footer {
+body.dark-mode header {
   border-color: #495057;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+body.dark-mode .logo a {
+    color: var(--text-color-dark);
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+body.dark-mode nav a {
+    color: var(--text-color-dark);
 }
 
 main {
@@ -107,6 +123,12 @@ body.dark-mode .post a {
 footer {
     border-top: 1px solid #dee2e6;
     margin-top: 3rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+body.dark-mode footer {
+    border-color: #495057;
 }
 
 .author-bio {
