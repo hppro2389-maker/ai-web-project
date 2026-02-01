@@ -33,16 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><strong>Postman:</strong> API 개발 및 테스트를 위한 필수 도구입니다. 복잡한 HTTP 요청을 쉽게 보내고 응답을 확인할 수 있으며, 테스트 스크립트를 작성하여 API 동작을 자동화할 수 있습니다.</li>
                     <li><strong>Fig:</strong> 터미널을 위한 자동 완성 기능입니다. IDE의 코드 완성 기능처럼, 터미널 명령어에 대한 자동 완성과 설명을 제공하여 작업 효율을 극대화합니다.</li>
                     <li><strong>Obsidian:</strong> 마크다운 기반의 개인 지식 관리 시스템(PKM)입니다. 노트를 양방향으로 연결하여 자신만의 지식 네트워크를 구축할 수 있으며, 개발 일지나 프로젝트 문서를 작성하는 데 매우 유용합니다.</li>
-                    <li><strong>GitHub Copilot:</strong> AI 기반의 코드 자동 완성 도구입니다. 단순한 코드 조각을 넘어, 함수 전체나 복잡한 알고리즘까지 제안해주어 코딩 속도를 획기적으로 높여줍니다. 아래는 간단한 예시입니다.</li>
+                    <li><strong>GitHub Copilot:</strong> AI 기반의 코드 자동 완성 도구입니다. 단순한 코드 조각을 넘어, 함수 전체나 복잡한 알고리즘까지 제안해주어 코딩 속도를 획기적으로 높여줍니다.</li>
+                    <li><strong>Notion:</strong> 프로젝트 관리, 문서화, 개인적인 계획까지 모든 것을 한 곳에서 관리할 수 있는 올인원 생산성 앱입니다. 개발 팀의 협업 공간으로도 훌륭하게 활용될 수 있습니다.</li>
                 </ol>
-<pre><code class="language-javascript">
-// Simple function to greet a user
-function greet(user) {
-  console.log(\`Hello, \${user}!\`);
-}
-
-greet('Developer');
-</code></pre>
                 <p>이 도구들을 활용하여 여러분의 개발 워크플로우를 개선해보세요!</p>
             `
         },
@@ -178,7 +171,6 @@ greet('Developer');
                 })
                 .then(html => {
                     contentArea.innerHTML = html;
-                    Prism.highlightAll(); // Highlight new content
                 })
                 .catch(error => {
                     console.error('Error fetching post:', error);
@@ -195,7 +187,6 @@ greet('Developer');
                     </div>
                 </article>
             `;
-            Prism.highlightAll(); // Highlight new content
         }
         showPage('post-view');
     }

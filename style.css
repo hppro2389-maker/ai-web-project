@@ -33,13 +33,12 @@ html[data-theme="dark"] {
 
 /* General Styles */
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    font-size: 17px;
 }
 
 #container {
@@ -126,9 +125,6 @@ nav {
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: box-shadow 0.3s ease-in-out, background-color 0.3s, border-color 0.3s;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .post:hover {
@@ -145,22 +141,17 @@ nav {
     margin-bottom: 15px;
 }
 
-.post-content {
-    line-height: 1.7;
-}
-
 .post-content p {
     text-align: justify;
-    margin-bottom: 1.5em;
 }
 
-.post-content a {
+.post a {
     color: var(--link-color);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-.post-content a:hover {
-    text-decoration: none;
+.post a:hover {
+    text-decoration: underline;
 }
 
 /* Ad Placeholders */
@@ -169,10 +160,9 @@ nav {
     color: var(--ad-text-color);
     text-align: center;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px 0;
     border: 1px dashed var(--ad-border-color);
     font-size: 1.2rem;
-    max-width: 800px;
 }
 
 .header-ad {
@@ -258,13 +248,4 @@ button[type="submit"]:hover {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0 5px;
-}
-
-/* Prism.js Overrides */
-.prism-copy-to-clipboard-button {
-    background: var(--button-bg-color) !important;
-    border: 1px solid var(--border-color) !important;
-}
-pre[class*="language-"].line-numbers {
-    padding-left: 0 !important;
 }
