@@ -23,6 +23,7 @@ const posts = [
   {
     slug: 'first-post',
     title: 'My First Post',
+    date: 'February 1, 2026',
     content: `
       <h2>My First Post</h2>
       <p>This is my first post on my new blog. I'm excited to share my thoughts with the world.</p>
@@ -32,6 +33,7 @@ const posts = [
   {
     slug: 'second-post',
     title: 'Another Post',
+    date: 'February 2, 2026',
     content: `
       <h2>Another Post</h2>
       <p>Here's another post. I'm getting the hang of this.</p>
@@ -41,6 +43,7 @@ const posts = [
     {
     slug: 'third-post',
     title: 'A Third Post',
+    date: 'February 3, 2026',
     content: `
       <h2>A Third Post</h2>
       <p>This is the third post. I'm on a roll!</p>
@@ -56,7 +59,10 @@ function renderPostList() {
     <ul class="post-list">
       ${posts.map(post => `
         <li>
-          <a href="#post/${post.slug}">${post.title}</a>
+          <a href="#post/${post.slug}">
+            <h3>${post.title}</h3>
+            <p class="post-date">${post.date}</p>
+          </a>
         </li>
       `).join('')}
     </ul>
@@ -69,6 +75,7 @@ function renderPost(slug) {
     app.innerHTML = `
       <div class="post">
         <a href="#">&larr; Back to posts</a>
+        <p class="post-date">${post.date}</p>
         ${post.content}
       </div>
     `;
