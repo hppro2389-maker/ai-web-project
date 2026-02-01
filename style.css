@@ -78,11 +78,13 @@ header a:hover {
 }
 
 nav {
-    float: right;
+    /* Removed float: right; as it conflicts with display: flex; */
     margin-top: -40px;
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+    justify-content: flex-end; /* Align items to the right within the nav */
 }
 
 nav a {
@@ -106,6 +108,11 @@ nav a:hover {
 #sidebar {
     flex: 1;
     height: fit-content;
+}
+
+/* Hide sidebar for specific views, controlled by JS setting class on body */
+body.hide-sidebar #sidebar {
+    display: none;
 }
 
 #sidebar-content {
@@ -283,4 +290,21 @@ button[type="submit"]:hover {
 #theme-toggle:hover {
     color: var(--button-hover-bg-color);
 }
+
+/* Back to List Button Styling */
+#back-to-list {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-list:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
 

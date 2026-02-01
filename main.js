@@ -121,6 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pages[pageId]) {
             pages[pageId].style.display = 'block';
         }
+        
+        // Control sidebar visibility based on pageId
+        if (pageId === 'post-list') {
+            document.body.classList.remove('hide-sidebar');
+        } else {
+            document.body.classList.add('hide-sidebar');
+        }
     }
 
     function renderPostList() {
@@ -167,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.ok ? response.text() : Promise.reject('File not found'))
                 .then(html => {
                     contentArea.innerHTML = html;
-                    // Prism.highlightAll is not needed if using autoloader
+                    Prism.highlightAll(); // Re-integrate Prism.js highlighting
                 })
                 .catch(error => {
                     console.error('Error fetching post:', error);
@@ -181,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="post-content">${post.content}</div>
                 </article>
             `;
-            // Prism.highlightAll(); might be needed here for inline content
+            Prism.highlightAll(); // Re-integrate Prism.js highlighting
         }
         showPage('post-view');
     }
