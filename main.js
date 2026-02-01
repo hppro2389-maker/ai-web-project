@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     const posts = [
         {
+            id: 6,
+            title: "2026년 청년 도약 계좌, 5천만 원 목돈 만들기 A to Z",
+            date: "2026년 2월 1일",
+            summary: "2026년 청년 도약 계좌 신청 방법, 자격, 혜택을 총정리했습니다. 5천만 원 목돈 만들기를 위한 정부 기여금, 비과세 혜택부터 온라인 신청 절차까지 A to Z를 확인하세요.",
+            url: "posts/2026-02-01-cheongnyeon-doyak-gyejwa-sincheong-bangbeop.html"
+        },
+        {
             id: 1,
             title: "클린 아키텍처는 정말로 필요한가?",
             date: "2024년 4월 10일",
+            summary: "소프트웨어 개발에서 '클린 아키텍처'는 거의 종교적인 지위를 얻었습니다. 하지만 모든 프로젝트에 정말로 클린 아키텍처가 필요할까요? 그 장점과 단점, 그리고 현실적인 적용법을 알아봅니다.",
             content: `
                 <p>소프트웨어 개발 분야에서 '클린 아키텍처'는 거의 종교적인 지위를 얻었습니다. 하지만 모든 프로젝트에 정말로 클린 아키텍처가 필요할까요? 이 질문에 답하기 위해, 먼저 클린 아키텍처의 핵심 목표를 이해해야 합니다.</p>
                 <p>클린 아키텍처의 주요 목적은 관심사의 분리(Separation of Concerns)입니다. 즉, 비즈니스 로직을 프레임워크, UI, 데이터베이스와 같은 외부 요소로부터 독립시키는 것입니다. 이를 통해 시스템은 유연하고, 테스트하기 쉽고, 유지보수하기 좋아집니다. 예를 들어, 데이터베이스를 바꾸거나 UI 프레임워크를 업그레이드할 때 비즈니스 로직은 영향을 받지 않아야 합니다.</p>
@@ -15,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 2,
             title: "개발자를 위한 생산성 도구 5가지 추천",
             date: "2024년 4월 12일",
+            summary: "개발자에게 시간은 금입니다. 코딩 외에도 수많은 작업에 시간이 소요되기 때문입니다. 제가 매일 사용하는 Postman, Fig, Obsidian, GitHub Copilot, Notion 5가지 도구를 소개합니다.",
             content: `
                 <p>개발자에게 시간은 금입니다. 코딩 외에도 수많은 작업에 시간이 소요되기 때문입니다. 다행히도 우리의 생산성을 높여줄 훌륭한 도구들이 많이 있습니다. 제가 매일 사용하는 5가지 도구를 소개합니다.</p>
                 <ol>
@@ -31,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 3,
             title: "제주도, 코딩하기 좋은 숨겨진 카페 3선",
             date: "2024년 4월 15일",
+            summary: "때로는 익숙한 환경을 벗어나 새로운 곳에서 영감을 얻는 것이 필요합니다. '워케이션'의 성지, 제주도에서 제가 직접 방문하고 코딩하기 좋았던 카페 3곳을 소개합니다.",
             content: `
                 <p>때로는 익숙한 환경을 벗어나 새로운 곳에서 영감을 얻는 것이 필요합니다. '워케이션'의 성지, 제주도에서 제가 직접 방문하고 코딩하기 좋았던 카페 3곳을 소개합니다.</p>
                 <ul>
@@ -45,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 4,
             title: "TDD(테스트 주도 개발)는 시간 낭비일까?",
             date: "2024년 4月 18일",
+            summary: "TDD는 '실패하는 테스트를 먼저 작성하고, 그 테스트를 통과시키는 코드를 작성한 후, 코드를 리팩토링하는' 개발 방식입니다. TDD의 장점과 단점, 그리고 현실적인 적용 방안에 대해 알아봅니다.",
             content: `
                 <p>테스트 주도 개발(TDD)은 '실패하는 테스트를 먼저 작성하고, 그 테스트를 통과시키는 코드를 작성한 후, 코드를 리팩토링하는' 개발 방식입니다. 많은 개발자들이 TDD의 이점을 칭찬하지만, 일각에서는 오히려 개발 속도를 저해하는 시간 낭비라고 주장합니다.</p>
                 <p>TDD의 가장 큰 장점은 '설계 개선'과 '안정성'입니다. 테스트를 먼저 작성하는 과정에서 코드의 인터페이스와 역할을 더 명확하게 고민하게 되며, 이는 자연스럽게 더 나은 설계로 이어집니다. 또한, 촘촘하게 짜인 테스트 코드는 코드 변경 시 발생할 수 있는 부작용을 빠르게 감지하여 시스템의 안정성을 높여줍니다.</p>
@@ -56,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 5,
             title: "나를 성장시킨 책 3권: '함께 자라기', '실용주의 프로그래머', '생각에 관한 생각'",
             date: "2024년 4월 22일",
+            summary: "독서는 제가 개발자로서, 그리고 한 개인으로서 성장하는 데 가장 중요한 자양분이었습니다. 저에게 큰 영향을 미친 '함께 자라기', '실용주의 프로그래머', '생각에 관한 생각' 세 권의 책을 소개합니다.",
             content: `
                 <p>독서는 제가 개발자로서, 그리고 한 개인으로서 성장하는 데 가장 중요한 자양분이었습니다. 수많은 책 중에서 저에게 특히 큰 영향을 미친 3권의 책을 소개하고자 합니다.</p>
                 <dl>
@@ -104,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2><a href="#" data-post-id="${post.id}">${post.title}</a></h2>
                 <div class="post-meta">게시일: ${post.date}</div>
                 <div class="post-content">
-                    <p>${post.content.substring(0, 200).replace(/<[^>]*>/g, '')}...</p>
+                    <p>${post.summary}</p>
                 </div>
             `;
             postListContainer.appendChild(postElement);
@@ -123,16 +135,41 @@ document.addEventListener('DOMContentLoaded', function() {
         const post = posts.find(p => p.id === postId);
         if (!post) return;
 
+        // Base structure for the post view
         postViewContainer.innerHTML = `
             <button id="back-to-list">← 목록으로 돌아가기</button>
-            <article class="post">
-                <h2>${post.title}</h2>
-                <div class="post-meta">게시일: ${post.date}</div>
-                <div class="post-content">
-                    ${post.content}
-                </div>
-            </article>
+            <div id="post-content-area"></div>
         `;
+        const contentArea = postViewContainer.querySelector('#post-content-area');
+
+        if (post.url) {
+            // If post content is in a separate file, fetch it
+            fetch(post.url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    contentArea.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error fetching post:', error);
+                    contentArea.innerHTML = '<p>게시물을 불러오는 데 실패했습니다.</p>';
+                });
+        } else if (post.content) {
+            // For older posts with content directly in the JS object
+            contentArea.innerHTML = `
+                <article class="post">
+                    <h2>${post.title}</h2>
+                    <div class="post-meta">게시일: ${post.date}</div>
+                    <div class="post-content">
+                        ${post.content}
+                    </div>
+                </article>
+            `;
+        }
         showPage('post-view');
     }
 
