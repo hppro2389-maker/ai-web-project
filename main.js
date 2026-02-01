@@ -227,4 +227,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial Render
     renderPostList();
     updateSidebar();
+
+    // --- Theme Toggle Logic ---
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        let currentTheme = document.documentElement.getAttribute('data-theme');
+        let newTheme = 'dark';
+        if (currentTheme === 'dark') {
+            newTheme = 'light';
+        }
+
+        if (newTheme === 'light') {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 });

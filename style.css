@@ -1,10 +1,44 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg-color: #fff;
+    --border-color: #ddd;
+    --link-color: #333;
+    --meta-text-color: #888;
+    --ad-bg-color: #f0f0f0;
+    --ad-border-color: #ccc;
+    --ad-text-color: #bbb;
+    --button-bg-color: #333;
+    --button-text-color: #fff;
+    --button-hover-bg-color: #555;
+    --header-bg-color: #fff;
+}
+
+html[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --card-bg-color: #16213e;
+    --border-color: #2a3a5e;
+    --link-color: #e0e0e0;
+    --meta-text-color: #9fa8da;
+    --ad-bg-color: #2a3a5e;
+    --ad-border-color: #16213e;
+    --ad-text-color: #5a6a8e;
+    --button-bg-color: #0f3460;
+    --button-text-color: #e0e0e0;
+    --button-hover-bg-color: #16213e;
+    --header-bg-color: #16213e;
+}
+
+
 /* General Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #container {
@@ -16,12 +50,13 @@ body {
 
 /* Header */
 header {
-    background: #fff;
-    color: #333;
+    background: var(--header-bg-color);
+    color: var(--text-color);
     padding: 1rem 0;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 header h1 {
@@ -30,13 +65,16 @@ header h1 {
 }
 
 header a {
-    color: #333;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 nav {
     float: right;
     margin-top: -40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 /* Main Content Layout */
@@ -51,14 +89,15 @@ nav {
 
 #sidebar {
     flex: 1;
-    background: #fff;
+    background: var(--card-bg-color);
     padding: 20px;
     border-radius: 5px;
     height: fit-content;
+    transition: background-color 0.3s;
 }
 
 #sidebar h3 {
-    border-bottom: 2px solid #f4f4f4;
+    border-bottom: 2px solid var(--bg-color);
     padding-bottom: 10px;
     margin-top: 0;
 }
@@ -73,19 +112,19 @@ nav {
 }
 
 #sidebar a {
-    color: #333;
+    color: var(--link-color);
 }
 
 
 /* Blog Post */
 .post {
-    background: #fff;
+    background: var(--card-bg-color);
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s, border-color 0.3s;
 }
 
 .post:hover {
@@ -97,7 +136,7 @@ nav {
 }
 
 .post-meta {
-    color: #888;
+    color: var(--meta-text-color);
     font-size: 0.9em;
     margin-bottom: 15px;
 }
@@ -107,7 +146,7 @@ nav {
 }
 
 .post a {
-    color: #333;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -117,12 +156,12 @@ nav {
 
 /* Ad Placeholders */
 .ad-placeholder {
-    background: #f0f0f0;
-    color: #bbb;
+    background: var(--ad-bg-color);
+    color: var(--ad-text-color);
     text-align: center;
     padding: 20px;
     margin: 20px 0;
-    border: 1px dashed #ccc;
+    border: 1px dashed var(--ad-border-color);
     font-size: 1.2rem;
 }
 
@@ -142,7 +181,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
@@ -160,6 +199,7 @@ footer {
         float: none;
         text-align: center;
         margin-top: 10px;
+        justify-content: center;
     }
 }
 
@@ -177,14 +217,17 @@ footer {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
+button,
 button[type="submit"] {
     display: inline-block;
-    background: #333;
-    color: #fff;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -192,6 +235,17 @@ button[type="submit"] {
     transition: background 0.3s ease;
 }
 
+button:hover,
 button[type="submit"]:hover {
-    background: #555;
+    background: var(--button-hover-bg-color);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 5px;
 }

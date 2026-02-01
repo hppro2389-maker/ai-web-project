@@ -9,6 +9,18 @@
     <meta name="google-adsense-account" content="ca-pub-3352793766620935">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3352793766620935"
      crossorigin="anonymous"></script>
+    <script>
+      (function() {
+        try {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          console.error('Could not access localStorage for theme setting.', e);
+        }
+      })();
+    </script>
 </head>
 <body>
     <div id="container">
@@ -19,6 +31,7 @@
                 <a href="#" data-page="about">About</a>
                 <a href="#" data-page="privacy">Privacy Policy</a>
                 <a href="#" data-page="contact">Contact</a>
+                <button id="theme-toggle">🌓</button>
             </nav>
             <div class="ad-placeholder header-ad">광고</div>
         </header>
