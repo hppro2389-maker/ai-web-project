@@ -12,14 +12,32 @@
 <body>
     <div id="container">
         <header>
-            <h1><a href="#">킹경덕의 Tech & Life log</a></h1>
+            <h1><a href="/">킹경덕의 Tech & Life log</a></h1>
             <nav>
                 <a href="#about">About</a>
             </nav>
+            <div class="ad-placeholder header-ad">광고</div>
         </header>
-        <main id="app">
-            <!-- Blog posts will be rendered here by main.js -->
-        </main>
+        <div id="main-content">
+            <main id="app" class="content-area">
+                <div id="post-list">
+                    <!-- Blog posts will be rendered here by main.js -->
+                </div>
+                <div id="post-view" style="display: none;">
+                    <!-- Single post content will be rendered here -->
+                </div>
+            </main>
+            <aside id="sidebar">
+                <div class="ad-placeholder sidebar-ad">광고</div>
+                <h3>소개</h3>
+                <p>안녕하세요! 기술과 일상에 대한 생각을 공유하는 블로그입니다.</p>
+                <h3>인기 게시물</h3>
+                <ul>
+                    <li><a href="#">첫 번째 블로그 게시물</a></li>
+                    <li><a href="#">두 번째 블로그 게시물</a></li>
+                </ul>
+            </aside>
+        </div>
         <footer>
             <div class="footer-content">
                  <p>&copy; 2024 킹경덕의 Tech & Life log. All rights reserved.</p>
