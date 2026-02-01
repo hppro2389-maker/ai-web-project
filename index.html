@@ -1,44 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal Blog</title>
-  <meta name="description" content="A personal blog about technology, life, and everything in between.">
-  <meta name="keywords" content="blog, personal blog, technology, lifestyle, mindfulness">
+  <title>나의 개인 블로그</title>
+  <meta name="description" content="기술, 삶, 그리고 그 사이의 모든 것에 대한 개인 블로그입니다.">
+  <meta name="keywords" content="블로그, 개인 블로그, 기술, 라이프스타일, 마음챙김">
   <meta name="google-adsense-account" content="ca-pub-2512786375435853">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2512786375435853"
      crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="#">My Personal Blog</a>
+      <a href="#">나의 개인 블로그</a>
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#post/about">About</a>
-      <a href="#post/contact">Contact</a>
-      <a href="#post/privacy-policy">Privacy Policy</a>
+      <a href="#">홈</a>
+      <a href="#post/about">소개</a>
+      <a href="#post/contact">문의</a>
+      <a href="#post/privacy-policy">개인정보처리방침</a>
     </nav>
-    <button id="theme-toggle">Toggle Theme</button>
+    <button id="theme-toggle">테마 변경</button>
   </header>
-  <main id="app"></main>
+  <div class="container">
+    <main id="app"></main>
+    <aside class="sidebar">
+        <div class="categories">
+            <!-- Categories will be rendered here by JavaScript -->
+        </div>
+    </aside>
+  </div>
   <footer>
     <div class="author-bio">
-        <h3>About the Author</h3>
-        <p>A passionate writer sharing thoughts on technology, life, and everything in between.</p>
+        <h3>작성자 소개</h3>
+        <p>기술, 삶, 그리고 그 사이의 모든 것에 대한 생각을 공유하는 열정적인 작가입니다.</p>
     </div>
     <div class="social-links">
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
+        <a href="#">트위터</a>
+        <a href="#">링크드인</a>
+        <a href="#">깃허브</a>
     </div>
-    <p>&copy; 2026 My Personal Blog</p>
+    <p>&copy; 2026 나의 개인 블로그</p>
   </footer>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
