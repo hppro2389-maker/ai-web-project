@@ -32,6 +32,9 @@ html[data-theme="dark"] {
 
 
 /* General Styles */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -67,6 +70,11 @@ header h1 {
 header a {
     color: var(--link-color);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--button-hover-bg-color); /* Use a slightly different color on hover */
 }
 
 nav {
@@ -75,6 +83,14 @@ nav {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--button-hover-bg-color); /* Consistent hover color for nav links */
 }
 
 /* Main Content Layout */
@@ -113,6 +129,12 @@ nav {
 
 #sidebar a {
     color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+#sidebar a:hover {
+    text-decoration: underline;
+    color: var(--button-hover-bg-color);
 }
 
 
@@ -124,11 +146,12 @@ nav {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out, background-color 0.3s, border-color 0.3s;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s, border-color 0.3s, transform 0.3s ease;
 }
 
 .post:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 .post h2 {
@@ -248,4 +271,10 @@ button[type="submit"]:hover {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0 5px;
+    transition: color 0.3s ease;
 }
+
+#theme-toggle:hover {
+    color: var(--button-hover-bg-color);
+}
+
