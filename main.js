@@ -23,7 +23,7 @@ const posts = [
   {
     slug: 'good-morning-routine',
     title: '성공적인 하루를 위한 아침 루틴의 중요성',
-    category: '자기계발',
+    category: "King's IT", // Changed category
     date: '2026년 2월 1일',
     content: `
       <h2>성공적인 하루를 위한 아침 루틴의 중요성</h2>
@@ -41,7 +41,7 @@ const posts = [
   {
     slug: 'mindful-eating-guide',
     title: '마음챙김 식사 가이드',
-    category: '건강',
+    category: "Smart-Life", // Changed category
     date: '2026년 2월 2일',
     content: `
       <h2>마음챙김 식사 가이드</h2>
@@ -59,7 +59,7 @@ const posts = [
     {
     slug: 'digital-detox-benefits',
     title: '디지털 디톡스의 이점',
-    category: '라이프스타일',
+    category: "Quick-Tips", // Changed category
     date: '2026년 2월 3일',
     content: `
       <h2>디지털 디톡스의 이점</h2>
@@ -77,45 +77,85 @@ const posts = [
   {
       slug: 'about',
       title: '소개',
-      category: '소개',
+      category: '블로그 소개', // Changed category for internal pages
       content: `
-        <h2>소개</h2>
-        <p>저희 블로그에 오신 것을 환영합니다! 저희는 다양한 주제에 대한 고품질 콘텐츠를 공유하는 데 전념하는 열정적인 작가 팀입니다.</p>
-        <p>저희 사이트를 방문해주셔서 감사합니다. 저희 콘텐츠를 즐기고 성장하는 커뮤니티의 일원이 되기를 바랍니다.</p>
+        <h2>블로그 소개</h2>
+        <p>안녕하세요, 킹경덕의 Tech & Life log에 오신 것을 환영합니다! 저는 IT 기획자로서 실무에서 얻은 보안 노하우, 직접 사용해 본 테크 제품에 대한 솔직한 리뷰, 그리고 복잡한 재테크를 쉽고 슬기롭게 풀어내는 이야기를 공유하고 있습니다. 변화하는 IT 트렌드 속에서 여러분의 업무와 삶에 실질적인 도움을 드리고자 합니다.</p>
+        <p>이곳에서 여러분은 다음과 같은 다양한 주제를 만나보실 수 있습니다:</p>
+        <ul>
+            <li><strong>[King's IT]:</strong> 현직 IT 기획자의 시선으로 바라보는 운영, 보안, 개인 정보(PI) 보호 노하우.</li>
+            <li><strong>[Work-Log]:</strong> 업무 자동화 팁, AI 활용법 등 스마트한 업무 환경 구축을 위한 실용적인 정보.</li>
+            <li><strong>[Smart-Life]:</strong> 테슬라, 최신 가전제품 등 삶을 더 윤택하게 만들어 줄 테크 리뷰와 활용기.</li>
+            <li><strong>[Money-Log]:</strong> 복잡한 재테크와 부동산 투자, 자산 관리에 대한 쉽고 슬기로운 접근법.</li>
+            <li><strong>[Quick-Tips]:</strong> 일상 속에서 발견한 유용하고 소소한 꿀팁들.</li>
+        </ul>
+        <p>지식과 경험을 공유하며 함께 성장하는 공간이 되기를 바랍니다. 방문해 주셔서 감사합니다!</p>
     `
   },
   {
       slug: 'contact',
       title: '문의',
-      category: '문의',
+      category: '블로그 안내',
       content: `
-        <h2>문의</h2>
-        <p>여러분의 의견을 듣고 싶습니다! 질문, 의견 또는 제안이 있으시면 언제든지 연락주십시오.</p>
-        <p>이메일(<a href="mailto:contact@example.com">contact@example.com</a>)로 연락하실 수 있습니다.</p>
+        <h2>문의하기</h2>
+        <p>저의 블로그에 대한 질문, 제안, 또는 협업 문의가 있으시면 언제든지 환영합니다.</p>
+        <p>아래 이메일 주소로 연락 주시면 최대한 빠르게 답변 드리겠습니다.</p>
+        <p>이메일: <a href="mailto:contact@example.com">contact@example.com</a></p>
+        <p>여러분의 소중한 의견을 기다립니다!</p>
     `
   },
   {
       slug: 'privacy-policy',
       title: '개인정보 처리방침',
-      category: '정책',
+      category: '블로그 안내',
       content: `
         <h2>개인정보 처리방침</h2>
-        <p>본 개인정보 처리방침은 귀하가 이 웹사이트를 방문하거나 구매할 때 귀하의 개인정보가 어떻게 수집, 사용 및 공유되는지 설명합니다.</p>
-        <h3>수집하는 개인정보</h3>
-        <p>귀하가 사이트를 방문할 때 당사는 귀하의 웹 브라우저, IP 주소, 시간대 및 귀하의 기기에 설치된 일부 쿠키에 대한 정보를 포함하여 귀하의 기기에 대한 특정 정보를 자동으로 수집합니다.</p>
-        <h3>개인정보 사용 방법</h3>
-        <p>당사는 일반적으로 사이트를 통해 접수된 모든 주문을 처리하기 위해 수집한 주문 정보를 사용합니다(결제 정보 처리, 배송 준비, 인보이스 및/또는 주문 확인서 제공 포함). 또한 당사는 이 주문 정보를 사용하여 다음을 수행합니다.</p>
+        <p>킹경덕의 Tech & Life log는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령상의 개인정보 보호 규정을 준수하며, 정보통신망법에 따라 개인정보 처리방침을 정하여 이용자의 권익 보호에 최선을 다하고 있습니다. 본 개인정보 처리방침은 변경될 수 있으며, 변경 시에는 공지사항을 통해 안내합니다.</p>
+
+        <h3>1. 개인정보의 수집 및 이용 목적</h3>
+        <p>본 블로그는 다음 목적을 위해 개인정보를 수집 및 이용합니다:</p>
         <ul>
-            <li>귀하와 소통합니다.</li>
-            <li>잠재적인 위험이나 사기에 대한 주문을 심사합니다.</li>
-            <li>귀하가 당사와 공유한 기본 설정에 따라 당사 제품 또는 서비스와 관련된 정보 또는 광고를 귀하에게 제공합니다.</li>
+            <li>블로그 서비스 제공 (콘텐츠 제공, 문의 응대 등)</li>
+            <li>이용자 문의 및 불만 처리</li>
+            <li>새로운 서비스 및 이벤트 정보 제공</li>
         </ul>
-        <h3>개인정보 공유</h3>
-        <p>당사는 위에 설명된 대로 귀하의 개인정보를 사용하는 데 도움이 되도록 제3자와 귀하의 개인정보를 공유합니다. 예를 들어, 당사는 고객이 사이트를 어떻게 사용하는지 이해하는 데 도움이 되도록 Google Analytics를 사용합니다.</p>
-        <h3>귀하의 권리</h3>
-        <p>귀하가 유럽 거주자인 경우, 귀하는 당사가 보유한 귀하에 대한 개인정보에 접근하고 귀하의 개인정보를 수정, 업데이트 또는 삭제하도록 요청할 권리가 있습니다. 이 권리를 행사하려면 아래 연락처 정보를 통해 당사에 문의하십시오.</p>
-        <h3>문의하기</h3>
-        <p>당사의 개인정보 보호 관행에 대한 자세한 내용, 질문이 있거나 불만 사항이 있는 경우 이메일(<a href="mailto:contact@example.com">contact@example.com</a>)로 문의하십시오.</p>
+
+        <h3>2. 수집하는 개인정보 항목</h3>
+        <p>기본적으로 개인정보를 직접 수집하지 않습니다. 단, 문의 시 자발적으로 제공하는 이메일 주소 등은 문의 응대를 위해서만 사용됩니다.</p>
+        <p>사이트 방문 시 웹 브라우저, IP 주소, 시간대, 쿠키 정보 등 기기 정보가 자동으로 수집될 수 있습니다. 이는 웹사이트 트래픽 분석 및 서비스 개선을 위한 목적입니다.</p>
+
+        <h3>3. 개인정보의 보유 및 이용 기간</h3>
+        <p>수집된 개인정보는 원칙적으로 개인정보의 수집 및 이용 목적이 달성되면 지체 없이 파기합니다. 단, 관련 법령에 의해 보존할 필요가 있는 경우 해당 법령이 정한 기간 동안 보존합니다.</p>
+
+        <h3>4. 개인정보의 제3자 제공</h3>
+        <p>본 블로그는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다:</p>
+        <ul>
+            <li>이용자가 사전에 동의한 경우</li>
+            <li>법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+        </ul>
+
+        <h3>5. 이용자의 권리</h3>
+        <p>이용자는 언제든지 자신의 개인정보를 조회하거나 수정할 수 있으며, 개인정보 처리 동의 철회 또는 삭제를 요청할 수 있습니다. 개인정보 관리책임자에게 이메일로 연락하시면 지체 없이 조치하겠습니다.</p>
+
+        <h3>6. 개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항</h3>
+        <p>본 블로그는 쿠키(cookie)를 사용합니다. 쿠키는 웹사이트를 운영하는 데 이용되는 서버가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자의 컴퓨터 하드디스크에 저장됩니다.</p>
+        <ul>
+            <li><strong>쿠키의 사용 목적:</strong> 방문 기록 및 패턴 분석, 사용자 맞춤 서비스 제공 등을 위해 사용됩니다.</li>
+            <li><strong>쿠키 설치에 대한 선택권:</strong> 이용자는 웹 브라우저에서 옵션을 설정함으로써 쿠키 저장을 거부할 수 있습니다. 단, 쿠키 저장을 거부할 경우 일부 서비스 이용에 어려움이 있을 수 있습니다.</li>
+        </ul>
+
+        <h3>7. 개인정보 보호책임자</h3>
+        <p>본 블로그는 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+        <p>개인정보 보호책임자: 킹경덕 (IT 기획자)</p>
+        <p>이메일: <a href="mailto:contact@example.com">contact@example.com</a></p>
+        <p>기타 개인정보 침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.</p>
+        <ul>
+            <li>개인정보 침해신고센터 (<a href="http://privacy.kisa.or.kr" target="_blank">privacy.kisa.or.kr</a> / 국번없이 118)</li>
+            <li>대검찰청 사이버수사과 (<a href="http://www.spo.go.kr" target="_blank">www.spo.go.kr</a> / 국번없이 1301)</li>
+            <li>경찰청 사이버안전국 (<a href="http://cyberbureau.police.go.kr" target="_blank">cyberbureau.police.go.kr</a> / 국번없이 182)</li>
+        </ul>
+
+        <p>본 개인정보 처리방침은 2026년 2월 4일부터 적용됩니다.</p>
     `
   }
 ];
@@ -123,19 +163,26 @@ const posts = [
 const app = document.getElementById('app');
 
 function getCategories() {
-    const categories = posts.map(post => post.category);
+    const categories = posts
+      .filter(post => !['블로그 소개', '블로그 안내'].includes(post.category)) // Exclude special pages
+      .map(post => post.category);
     return [...new Set(categories)];
 }
 
-function renderPostList() {
-  const blogPosts = posts.filter(post => !['소개', '문의', '정책'].includes(post.category));
+function renderPostList(filterCategory = null) {
+  let filteredPosts = posts.filter(post => !['블로그 소개', '블로그 안내'].includes(post.category));
+
+  if (filterCategory) {
+    filteredPosts = filteredPosts.filter(post => post.category === filterCategory);
+  }
+
   app.innerHTML = `
     <ul class="post-list">
-      ${blogPosts.map(post => `
+      ${filteredPosts.map(post => `
         <li>
           <a href="#post/${post.slug}">
             <h3>${post.title}</h3>
-            <p class="post-date">${post.date}</p>
+            <p class="post-date">${post.date} &bull; ${post.category}</p>
           </a>
         </li>
       `).join('')}
@@ -149,7 +196,7 @@ function renderPost(slug) {
     app.innerHTML = `
       <div class="post">
         <a href="#">&larr; 목록으로 돌아가기</a>
-        <p class="post-date">${post.date || ''}</p>
+        <p class="post-date">${post.date || ''} &bull; ${post.category || ''}</p>
         ${post.content}
         <div class="social-share">
             <span>공유하기:</span>
@@ -171,19 +218,31 @@ function renderCategories() {
         categoryContainer.innerHTML = `
             <h3>카테고리</h3>
             <ul>
-                ${categories.map(category => `<li><a href="#">${category}</a></li>`).join('')}
+                ${categories.map(category => `<li><a href="#category/${category}">${category}</a></li>`).join('')}
             </ul>
         `;
+        // Add event listeners for category filtering
+        categoryContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const category = event.target.textContent;
+                renderPostList(category);
+                window.location.hash = `#category/${category}`; // Update hash for URL
+            });
+        });
     }
 }
-
 
 function router() {
   const path = window.location.hash;
   if (path.startsWith('#post/')) {
     const slug = path.substring('#post/'.length);
     renderPost(slug);
-  } else {
+  } else if (path.startsWith('#category/')) {
+    const category = path.substring('#category/'.length);
+    renderPostList(decodeURIComponent(category)); // Decode URI component for categories with spaces
+  }
+  else {
     renderPostList();
   }
   renderCategories();
